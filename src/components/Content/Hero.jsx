@@ -52,7 +52,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="md:w-1/2 md:ml-4">
-      <img className="w-85 h-85 rounded-lg shadow-custom" src="./assets/images/frontend-challenge-hero-img.png"/>
+      <img className="w-85 h-85 rounded-lg shadow-custom" src="../../assets/images/frontend-challenge-hero-img.png"/>
         
       </div>
     </div>
