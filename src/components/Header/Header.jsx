@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <div>
-      <div className="flex items-center justify-end space-x-4">
+      <div className="pt-5 flex items-center justify-end space-x-4">
         <Switcher />
         <div className="h-6 bg-gray-300 w-px dark:bg-border-dark"></div>
         <button
