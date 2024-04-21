@@ -16,11 +16,11 @@ const Header = () => {
 
   const [lang, setLang] = useState('en');
 
-
   const toggleLanguage = () => {
     setLang(lang === "tr" ? "en" : "tr")
     setLanguage(languages[lang === "tr" ? "en" : "tr"]);
   };
+
   return (
     <div>
      <div className="flex items-center justify-end space-x-4">

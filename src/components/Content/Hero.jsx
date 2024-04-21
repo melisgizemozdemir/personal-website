@@ -47,7 +47,7 @@ const Hero = () => {
       </div>
       <div className="md:w-1/2 md:ml-4">
         <img
-          src="src/assets/images/frontend-challenge-hero-img.png"
+          src="https://imgbox.com/gallery/edit/Qcj4XDhDaM/nBZxl36jzMMHi4Nw"
           className="w-85 h-85 rounded-lg shadow-custom"
         />
       </div>

@@ -1,50 +1,26 @@
+import { useEffect, useState } from "react";
 import Card from "../UI/Card";
 import ProjectCard from "../UI/ProjectCard";
+import axios from "axios";
 
 const Body = () => {
-  const content = [
-    {
-      title: "JavaScript",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aspernatur est, provident ipsam quas optio?",
-    },
-    {
-      title: "React.js",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aspernatur est, provident ipsam quas optio?",
-    },
-    {
-      title: "Node.js",
-      desc: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione aspernatur est, provident ipsam quas optio?",
-    },
-  ];
+ 
+  const [content, setContent] = useState([]);
+  const [projects, setProjects] = useState([]);
 
-  const projects = [
-    {
-      title: 'Workintech',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, esse sed assumenda aliquam minus nobis itaque veniam laborum a amet deleniti dolor magni, ad mollitia voluptates non ut velit nihil!',
-      tags: ['react', 'redux', 'axios'],
-      image: 'src/assets/images/69bb4825e42350e768340fdbec09d78b.png',
-      githubLink:'https://github.com/melisgizemozdemir',
-      siteLink:"https://workintech.com.tr/?gad_source=1&gclid=Cj0KCQjwiYOxBhC5ARIsAIvdH53etGqNoGjeZgUO7wOb5y8V160pWezaftVLa2x9ACO8c6IWCvXDjiMaAjTKEALw_wcB"
-    },
-    {
-      title: 'Workintech',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, esse sed assumenda aliquam minus nobis itaque veniam laborum a amet deleniti dolor magni, ad mollitia voluptates non ut velit nihil!',
-      tags: ['react', 'redux', 'axios'],
-      image: 'src/assets/images/69bb4825e42350e768340fdbec09d78b.png',
-      githubLink:"https://github.com/melisgizemozdemir",
-      siteLink:"https://workintech.com.tr/?gad_source=1&gclid=Cj0KCQjwiYOxBhC5ARIsAIvdH53etGqNoGjeZgUO7wOb5y8V160pWezaftVLa2x9ACO8c6IWCvXDjiMaAjTKEALw_wcB"
-    },
-    {
-      title: 'Workintech',
-      description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore, esse sed assumenda aliquam minus nobis itaque veniam laborum a amet deleniti dolor magni, ad mollitia voluptates non ut velit nihil!',
-      tags: ['react', 'redux', 'axios'],
-      image: 'src/assets/images/69bb4825e42350e768340fdbec09d78b.png',
-      githubLink: "https://github.com/melisgizemozdemir",
-      siteLink:"https://workintech.com.tr/?gad_source=1&gclid=Cj0KCQjwiYOxBhC5ARIsAIvdH53etGqNoGjeZgUO7wOb5y8V160pWezaftVLa2x9ACO8c6IWCvXDjiMaAjTKEALw_wcB"
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get("src/data.json");
+        setContent(response.data.content);
+        setProjects(response.data.projects);
+      } catch (error) {
+        console.error("Error: ", error);
+      }
+    };
 
-    },
-
-  ];
+    fetchData();
+  }, []);
 
   return (
     <section className="mt-20 container mx-auto py-8">
