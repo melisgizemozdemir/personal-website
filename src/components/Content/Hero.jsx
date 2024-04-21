@@ -46,10 +46,8 @@ const Hero = () => {
         </div>
       </div>
       <div className="md:w-1/2 md:ml-4">
-        <img
-          src="https://imgbox.com/gallery/edit/Qcj4XDhDaM/nBZxl36jzMMHi4Nw"
-          className="w-85 h-85 rounded-lg shadow-custom"
-        />
+      <a href="https://imgbox.com/ZcyGJ3L9" target="_blank"><img className="w-85 h-85 rounded-lg shadow-custom" src="https://thumbs2.imgbox.com/c0/d9/ZcyGJ3L9_t.png"/></a>
+        
       </div>
     </div>
   );
