@@ -13,21 +13,25 @@ var languages = {
 const Header = () => {
   const { setLanguage, language } = useContext(GlobalContext);
 
-
-  const [lang, setLang] = useState('en');
+  const [lang, setLang] = useState("en");
 
   const toggleLanguage = () => {
-    setLang(lang === "tr" ? "en" : "tr")
+    setLang(lang === "tr" ? "en" : "tr");
     setLanguage(languages[lang === "tr" ? "en" : "tr"]);
   };
 
   return (
     <div>
-     <div className="flex items-center justify-end space-x-4">
-     <Switcher/>
-    <div className="h-6 bg-gray-300 w-px dark:bg-border-dark"></div>
-  <button className="text-[#777777] dark:text-[#D9D9D9]]" onClick={toggleLanguage}>{language.lang}</button>
-</div>
+      <div className="flex items-center justify-end space-x-4">
+        <Switcher />
+        <div className="h-6 bg-gray-300 w-px dark:bg-border-dark"></div>
+        <button
+          className="text-[#777777] dark:text-[#D9D9D9]]"
+          onClick={toggleLanguage}
+        >
+          {language.lang}
+        </button>
+      </div>
       <div className="flex justify-between items-center p-4 mt-10">
         <div>
           <img
@@ -37,9 +41,7 @@ const Header = () => {
         </div>
         <Navigation />
       </div>
-
-      </div>
-    
+    </div>
   );
 };
 
