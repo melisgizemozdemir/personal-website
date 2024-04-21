@@ -46,7 +46,7 @@ const Hero = () => {
         </div>
       </div>
       <div className="md:w-1/2 md:ml-4">
-      <a href="https://imgbox.com/ZcyGJ3L9" target="_blank"><img className="w-85 h-85 rounded-lg shadow-custom" src="https://thumbs2.imgbox.com/c0/d9/ZcyGJ3L9_t.png"/></a>
+      <img className="w-85 h-85 rounded-lg shadow-custom" src="https://imgbox.com/ZcyGJ3L9"/>
         
       </div>
     </div>
